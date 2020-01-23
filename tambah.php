@@ -5,7 +5,8 @@ $conn = mysqli_connect("localhost", "root", "", "phpdasar");
 
 
 // cek apakah tombol submit sudah ditekan atau belum
-if( isset($_POST["submit"]) ){
+if ( isset($_POST["submit"]) ){
+    // var_dump($_POST);
 
     // cek apakah data berhasil ditambahkan atau tidak
     if ( tambah($_POST) > 0 ) {
@@ -24,7 +25,8 @@ if( isset($_POST["submit"]) ){
         </script>
         ";
     }
-};
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -41,23 +43,23 @@ if( isset($_POST["submit"]) ){
     <form action="" method="post">
         <ul>
             <li>
-            <label for="name">NRP   :</label>
+            <label for="nrp">NRP   :</label>
                 <input type="text" name="nrp" id="nrp" require>
             </li>
             <li>
-            <label for="name">Nama   :</label>
+            <label for="nama">Nama   :</label>
                 <input type="text" name="nama" id="nama">
             </li>
             <li>
-            <label for="name">Email   :</label>
+            <label for="email">Email   :</label>
                 <input type="text" name="email" id="email">
             </li>
             <li>
-            <label for="name">Jurusan   :</label>
+            <label for="jurusan">Jurusan   :</label>
                 <input type="text" name="jurusan" id="jurusan">
             </li>
             <li>
-            <label for="name">Gambar   :</label>
+            <label for="gambar">Gambar   :</label>
                 <input type="text" name="gambar" id="gambar">
             </li>
 

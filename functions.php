@@ -28,23 +28,21 @@ function tambah($data) {
 
     // query insert data
     $query = "INSERT INTO mahasiswa
-                VALUES
-                ('', '$nrp' , '$nama', '$email', '$jurusan', '$gambar')
-            ";
+                VALUES(NULL, '$nrp', '$nama', '$email', '$jurusan', '$gambar')";
     
     mysqli_query($conn, $query);
 
     return mysqli_affected_rows($conn);
-    }
+}
 
     
-    function hapus($id) {
+function hapus($id) {
         global $conn;
         
         mysqli_query($conn, "DELETE FROM mahasiswa WHERE id = $id");
         
         return mysqli_affected_rows($conn);
-    }
+}
 
 
     function ubah($data) {

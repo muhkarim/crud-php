@@ -39,11 +39,11 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
                 <a href="hapus.php?id=<?= $row["id"]; ?>" 
                 onclick="return confirm('yakin?');">hapus</a>
             </td>
-            <td><img src="img/" width="50"></td>
-            <td><?= $row["nrp"] ?></td> 
-            <td><?= $row["nama"] ?></td>
-            <td><?= $row["email"] ?></td>
-            <td><?= $row["jurusan"] ?></td>
+            <td><img src="img/<?= $row["gambar"]; ?>" width="50"></td>
+            <td><?= $row["nrp"]; ?></td> 
+            <td><?= $row["nama"]; ?></td>
+            <td><?= $row["email"]; ?></td>
+            <td><?= $row["jurusan"]; ?></td>
         </tr>
         <?php $i++; ?>
         <?php endforeach; ?>
